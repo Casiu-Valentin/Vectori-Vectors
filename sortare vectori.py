@@ -66,4 +66,5 @@ print("V initial dupa sortare: ") #v ramane neschimbat
 uv.afisare(v)
 print("V sortat: ")
 uv.afisare(a)
+uv.scrie_f("date.out",v)
 """
