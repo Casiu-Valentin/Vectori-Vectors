@@ -1,3 +1,4 @@
+# Realizat de/Produced by Casiu George Valentin
 def citire(n,v,tip):
     for i in range (n):
         if tip=="int":
