@@ -50,3 +50,20 @@ for el in v:
 print("V sortat: ")
 uv.afisare(vs)
 """
+
+"""
+#varianta 4
+vs = [0 for el in v ]
+k = 0
+for i in range(n) :
+    if v[i] % 2 == 0:
+        vs[k] = v[i]
+        k += 1
+for i in range(n) :
+    if v[i] % 2 == 1:
+        vs[k] = v[i]
+        k += 1
+print("V sortat: ")
+uv.afisare(vs)
+"""
+
