@@ -13,11 +13,11 @@ uv.afisare(v)
 
 #varianta 1
 k = 0 # indicele ultimului numar par adus/the index of the last even number
-for i in range(n):#parcurge toata lista si ia fiecare numar par si il aduce la inceput dupa ultimul numar par adus
-    if v[i] % 2 == 0:#/it goes through the whole list and take each even number and brings it to the begining after the last even number brought
-        x = v[i]#retine numarul par sa nu se piarda la mutare/keep the number so they don't get lost when moving
+for i in range(n):#parcurge toata lista de la stanga la dreapta si ia fiecare numar par si il aduce la inceput dupa ultimul numar par adus
+    if v[i] % 2 == 0:#/it goes through the whole list from left to right and take each even number and brings it to the begining after the last even number brought
+        x = v[i]#retine numarul par sa nu se piarda la mutare/keep the even number so they don't get lost when moving
         for j in range(i, k, -1):# muta toate elementele spre dreapta de la elementul par gasit pana la ultimul par gasit
-            v[j] = v[j-1]#/move all elements to the right from the next element found to the last one found
+            v[j] = v[j-1]#/move all elements to the right from the next even element found to the last one found
         v[k] = x
         k += 1
 print("V sortat: ")
@@ -25,6 +25,20 @@ uv.afisare(v)
 
 """
 #varianta 2
+k = n-1 # indicele ultimului numar impar adus/the index of the last odd number
+for i in range(n-1,-1,-1):#parcurge toata lista de la dreapta la stanga si ia fiecare numar par si il aduce la inceput dupa ultimul numar par adus
+    if v[i] % 2 == 1:#/it goes through the whole list from the right to left and take each even number and brings it to the begining after the last even number put
+        x = v[i]#retine numarul impar sa nu se piarda la mutare/keep the odd number so they don't get lost when moving
+        for j in range(i,k):# muta toate elementele spre stanga de la elementul impar gasit pana la ultimul impar gasit
+            v[j] = v[j+1]#/move all elements to the left from the next odd element found to the last one found
+        v[k] = x
+        k -= 1
+print("V sortat: ")
+uv.afisare(v)
+"""
+
+"""
+#varianta 3
 t = 0
 for el in v: #t calculeaza cate numere sunt pare/calculate how many numbers are even
     if el%2==0:
@@ -39,7 +53,7 @@ uv.afisare(v)
 """
 
 """
-#varianta 3
+#varianta 4
 t = 0
 for el in v: #t calculeaza cate numere sunt impare/calculate how many numbers a odd
     if el%2==1:
@@ -53,7 +67,7 @@ uv.afisare(v)
 """
 
 """
-#varianta 4
+#varianta 5
 vs=[]
 for el in v:
     if el % 2==0:
@@ -66,7 +80,7 @@ uv.afisare(vs)
 """
 
 """
-#varianta 5
+#varianta 6
 vs = [0 for el in v ]
 k = 0
 for i in range(n) :
