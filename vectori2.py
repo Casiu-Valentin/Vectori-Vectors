@@ -12,6 +12,19 @@ n,v=uv.citeste_f("date.in", "int")
 uv.afisare(v)
 
 #varianta 1
+k = 0 # indicele ultimului numar par adus
+for i in range(n):#parcurge toata lista si ia fiecare numar par si il aduce la inceput dupa ultimul numar par adus
+    if v[i] % 2 == 0:
+        x = v[i]#retine numarul par sa nu se piarda la mutare
+        for j in range(i, k, -1):# muta toate elementele spre dreapta de la elementul par gasit pana la ultimul par gasit 
+            v[j] = v[j-1]
+        v[k] = x
+        k += 1
+print("V sortat: ")
+uv.afisare(v)
+
+"""
+#varianta 2
 t = 0
 for el in v: #t calculeaza cate numere sunt pare/calculate how many numbers are even
     if el%2==0:
@@ -23,9 +36,10 @@ for i in range(t):# pentru fiecare numar par luat de la sfarsit spre inceput il 
             v[i],v[i-1]=v[i-1],v[i]
 print("V sortat: ")
 uv.afisare(v)
+"""
 
 """
-#varianta 2
+#varianta 3
 t = 0
 for el in v: #t calculeaza cate numere sunt impare/calculate how many numbers a odd
     if el%2==1:
@@ -39,7 +53,7 @@ uv.afisare(v)
 """
 
 """
-#varianta 3
+#varianta 4
 vs=[]
 for el in v:
     if el % 2==0:
@@ -52,7 +66,7 @@ uv.afisare(vs)
 """
 
 """
-#varianta 4
+#varianta 5
 vs = [0 for el in v ]
 k = 0
 for i in range(n) :
@@ -66,4 +80,3 @@ for i in range(n) :
 print("V sortat: ")
 uv.afisare(vs)
 """
-
