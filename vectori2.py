@@ -37,3 +37,16 @@ for i in range(t):# pentru fiecare numar impar luat de la inceput spre sfarsit i
 print("V sortat: ")
 uv.afisare(v)
 """
+
+"""
+#varianta 3
+vs=[]
+for el in v:
+    if el % 2==0:
+        vs.append(el)
+for el in v:
+    if el % 2==1:
+        vs.append(el)
+print("V sortat: ")
+uv.afisare(vs)
+"""
