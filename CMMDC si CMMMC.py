@@ -1,7 +1,7 @@
 # Realizat de/Produced by Casiu George Valentin
 """
-Se citeşte un vector cu n componente numere naturale.
-Sǎ se afişeze cel mai mare divizor comun si cle mai mic multiplu comun al celor n numere.
+Se citeşte un vector cu n componente numere naturale./We read n natural number as components to a vector. 
+Sǎ se afişeze cel mai mare divizor comun si cle mai mic multiplu comun al celor n numere./Display the greatest common divisor and the least common multiple of the n numbers.
 """
 def cmmdc(a,b):
     while a!=b:
