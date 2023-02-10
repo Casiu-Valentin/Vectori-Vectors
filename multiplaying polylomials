@@ -1,0 +1,45 @@
+# Realizat de/Produced by Casiu George Valentin
+"""
+Inmultirea polinoamelor/Multiplying polynomials
+f= a[0]+a[1]X+a[2]X²+a[3]X³+...+a[n]Xⁿ ,g= b[0]+b[1]X+b[2]X²+b[3]X³+...+b[m]Xᵐ.
+Produsul polinoamelor este/The product of the polynomials is:
+a[0]b[0]+(a[0]b[1]+a[1]b[0])X+(a[0]b[2]+a[1]b[1]+a[2]b[0])X²+(a[0]b[3]+a[1]b[2]+a[2]b[1]+a[3]b[0])X³+.....+a[n]b[m]Xⁿ⁺ᵐ
+"""
+
+def citire(text):# citire numar natural /natural number reading
+    n=''
+    while not(n.isdecimal()): # daca n nu e zecimal /if n is not decimal
+        n = input(text)
+        n = n.strip(' +')# elimina spatiile libere si '+' de la inceputul si sfarsitul numarului /remove spaces and '+' from the beginning and end of number
+    return int(n)
+
+# Programul principal/The main program
+
+n=citire("Introduceti gradul primului polinom/Enter the degree of first polynomial n=")
+a=[]
+b=[]
+for i in range(n):
+    a.append(int(input("a[" + str(i) + "]=")))
+m=citire("Introduceti gradul celui de al doilea polinom/Enter the degree of second polynomial  m=")
+for i in range(m):
+    b.append(int(input("b[" + str(i) + "]=")))
+n-=1; m-=1
+a=a+[0 for i in range(n,n+m)]
+b=b+[0 for i in range(m,n+m)]
+c=[0 for i in range(n+m+1)]
+for i in range (n+m+1):
+    for j in range(i+1):
+        c[i]+=a[j]*b[i-j]
+print(c)
+
+"""
+import numpy as np # si alte 2 variante cu ajutorul bibliotecii NumPy/And another two version with NumPy
+#versiunea/version 1
+p1 = np.poly1d([1,2,3])
+p2 = np.poly1d([1,2,3,4])
+print(p1*p2)
+
+#versiunea/version 2
+from numpy import convolve
+print(convolve([1,2,3],[1,2,3,4]))
+"""
