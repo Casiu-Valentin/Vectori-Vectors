@@ -32,6 +32,15 @@ for i in range (n+m+1):
         c[i]+=a[j]*b[i-j]
 print(c)
 
+#sau mult mai simplu/or much more easier
+a=[1,2,3]
+b=[1,2,3,4]
+c = [0]*(len(a)+len(b)-1)
+for i1,e1 in enumerate(a):
+    for i2,e2 in enumerate(b):
+        c[i1+i2] += e1*e2
+print(c)
+
 """
 import numpy as np # si alte 2 variante cu ajutorul bibliotecii NumPy/And another two version with NumPy
 #versiunea/version 1
