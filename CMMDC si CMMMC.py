@@ -9,17 +9,17 @@ def cmmdc(a,b):
             a=a-b
         else:
             b=b-a
-    return(a)
+    return a
 
 def cmmmc(a,b):
     c=a
     d=b
-    while c!=d:
-        if c<d:
-            c=c+a
+    while a!=b:
+        if a<b:
+            a+=c
         else:
-            d=d+b
-    return(c)
+            b+=d
+    return a
 
 # Programul principal/The main program
 import utile_vectori as uv
