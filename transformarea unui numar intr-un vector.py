@@ -13,7 +13,7 @@ def citire():# citire numar natural /natural number reading
     return int(n)
 
 # Programul principal/The main program
-#varianta 1
+#version 1/varianta 1
 n=citire()
 v=[0 for el in range(len(str(n)))]
 for i in range(len(str(n))):
@@ -21,13 +21,13 @@ for i in range(len(str(n))):
 print(v)
 
 """
-#varianta 2
+#version 2/varianta 2
 n=m=citire()
 nr = 0
-while m != 0:# calculam cate caractere are numarul. Se poate inlocuii cu nr=len(str(m))
+while m != 0:#calculate how may characters have number. We can change with n=len(str(m))/calculam cate caractere are numarul. Se poate inlocuii cu nr=len(str(m))
     m = m // 10
     nr += 1
-v=[0 for el in range(nr)]
+v=[0 for el in range(nr)]#we create a vector of lenght of number with all characters 0/cream un vector de lungimea numarului cu toatre componentele 0
 for i in range(nr-1,-1,-1):
     v[i] = n % 10
     n = n // 10
@@ -35,13 +35,13 @@ print(v)
 """
 
 """
-#varianta 3
+#version 3/varianta 3
 n=citire()
 print(len(str(n)))
 v=[]
-while n != 0:
+while n != 0:#we add the last digit one by one to a vector/adaugam ultima cifra pe rand la vector
     v.append(n%10)
     n=n//10
-v=v[::-1]
+v=v[::-1]#we reverse the vector/rasturnam vectorul
 print(v)
 """
