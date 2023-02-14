@@ -41,7 +41,7 @@ print(len(str(n)))
 v=[]
 while n != 0:#we add the last digit one by one to a vector/adaugam ultima cifra pe rand la vector
     v.append(n%10)
-    n=n//10
+    n//=10
 v=v[::-1]#we reverse the vector/rasturnam vectorul
 print(v)
 """
