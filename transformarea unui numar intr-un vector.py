@@ -1,8 +1,8 @@
-# Realizat de/Produced by Casiu George Valentin
+# Produced by/Realizat de Casiu George Valentin
 """
-Se citeşte un numǎr natural n (citirea se va face într-o variabilǎ de tip int). Sǎ se scrie acest numǎr într-un vector.
-Exemplu. Dacǎ citim 1231, vom avea V[1]=1, V[2]=2, V[3]=3, V[4]=1.
-Transform a natural number in a vector. Example: For 1234 we have V[1]=1, V[2]=2, V[3]=3, V[4]=1.
+Se citeşte un numǎr natural n (citirea se va face într-o variabilǎ de tip int). 
+Sǎ se scrie acest numǎr într-un vector. Exemplu: Pentru 1231, vom avea V[1]=1, V[2]=2, V[3]=3, V[4]=1.
+Transform a natural number read in a vector. Example: For 1234 we have V[1]=1, V[2]=2, V[3]=3, V[4]=1.
 """
 
 def citire():# citire numar natural /natural number reading
