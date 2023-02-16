@@ -13,19 +13,19 @@ def citirenat(text):# natural number reading/citire numar natural
     return int(n)
 
 def permutr(k,n,p):#the recursive version of permutations/varianta recursiva a permutarilor
-    i=c=0
-    if k==n+1: print(p[1:])
+    global ind
+    if k==n+1: ind+=1;print(str(ind)+".",p[1:])
     else:
         p[k]=k
         for i in range(1,k+1):
             p[i],p[k]=p[k],p[i]
-            permut(k+1,n,p)
+            permutr(k+1,n,p)
             p[i], p[k] = p[k], p[i]
 
 
 #The main program/ Programul principal
-"""
+
 n=citirenat("Enter the number/Introduceti numarul:")
+ind=0
 p=list(range(n+1))
 permutr(1,n,p)
-"""
