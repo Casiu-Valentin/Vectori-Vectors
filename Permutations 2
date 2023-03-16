@@ -1,0 +1,43 @@
+#Produced by/Realizat de Casiu George Valentin
+"""
+The set {1,2,3,.....n} is givin and all its permutation are requested./Se dă mulţimea {1,2,...,n} şi se cer toate permutările acesteia.
+Example for n=3 we have/Exemplu pentru n=3 avem:
+{3,1,2}, {2,3,1}, {2,1,3}, {3,2,1}, {1,3,2}, {1,2,3}.
+"""
+
+def citirenat(text):# natural number reading/citire numar natural
+    n=''
+    while not(n.isdecimal()): # if n is not decimal/daca n nu e zecimal
+        n = input(text)
+        n = n.strip(' +')# remove spaces and '+' from the beginning and end of number/elimina spatiile libere si '+' de la inceputul si sfarsitul numarului
+    return int(n)
+
+def perm(n):
+    p = []
+    for i in range(0,n+1):
+        p.append(i)
+    while True:
+        for i in range(1,n+1):
+            print(p[i], end=' ')
+        print("")
+        i = n - 1
+        found = 0
+        while (not found and i>0):
+            if p[i]<p[i+1]:
+                found = 1
+            else:
+                i = i - 1
+        k = n
+        while p[i]>p[k]:
+            k = k - 1
+        p[i],p[k]=p[k],p[i]
+        for j in range(1,int((n-i)/2)+1):
+            p[i+j],p[n-j+1]=p[n-j+1],p[i+j]
+        if not found:
+            break
+
+
+#The main program/ Programul principal
+
+n=citirenat("Enter the number/Introduceti numarul:")
+perm(n)
